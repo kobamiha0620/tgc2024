@@ -1,0 +1,142 @@
+@use "./base/varuable"as var;
+
+
+.creates {
+  margin-top: -1px;
+  background-color: #F5F5F5;
+  padding-bottom: 1px;
+  &__blc{
+    display: flex;
+    align-items: center;
+  }
+  &__img{
+    width: 416px;
+    min-width: 416px;
+    max-width: 416px;
+  }
+  &__intro{
+    padding: 0 44px 0 33px;
+  }
+  &__logo{
+    width: 200px;
+    margin-bottom: 15px;
+  }
+  &__txt{
+    color: var.$wblk;
+    @include var.fz(24);
+    line-height: 1.5;
+  }
+  &__btn{
+    width: 600px;
+    margin: 84px auto;
+    display: block;
+  }
+  &__setsumei{
+    padding: 0 35px;
+    margin-bottom: 55px;
+    &--inner{
+      border: solid 1px #000;
+      width: 100%;
+      background-color: #FFF;
+      padding: 56px;
+    } 
+    &--logo{
+      width: 389px;
+      margin: 0 auto 42px;
+    }
+    &--txt{
+      @include var.fz(24); 
+      color: var.$wblk;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    &--note{
+      @include var.fz(20);
+      line-height: 1.3;
+      color: var.$wblk;
+    }
+    &--link{
+      display: flex;
+      justify-content: center;
+      
+      li{
+        list-style-type: none;
+        margin: 55px 25px 0;
+        a{
+          display: block;
+          width: 65px;
+          height: 41px;
+          @include var.bg();
+          &.insta{
+            background-image: url('../img/insta.svg');
+          }
+          &.twitter{
+            background-image: url('../img/x.svg');
+          }
+          &.tiktok{
+            background-image: url('../img/tiktok.svg');
+          }
+          &.youtube{
+            background-image: url('../img/youtube.svg');
+          }
+          &.line{
+            background-image: url('../img/line.svg');
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: var.$spw) {
+    &__img{
+      width: 55.4vw;
+      min-width: 55.4vw;
+      max-width: 55.4vw;
+    }
+    &__intro{
+      padding: 0 6vw 0 4.3vw;
+    }
+    &__logo{
+      width: 27vw;
+      margin-bottom: 2vw;
+    }
+    &__txt{
+      @include var.fz(12);
+    }
+    &__btn{
+      width: 80vw;
+      margin: 11vw auto;
+    }
+    &__setsumei{
+      padding: 0 4.6vw;
+      margin-bottom: 7.3vw;
+      &--inner{
+
+        padding: 7.5vw;
+      } 
+      &--logo{
+        width: 52vw;
+        margin: 0 auto 5.6vw;
+      }
+      &--txt{
+        @include var.fz(12); 
+
+        margin-bottom: 5px;
+      }
+      &--note{
+        @include var.fz(10);
+
+      }
+      &--link{
+
+        li{
+          margin: 7.3vw 3.3vw 0;
+          a{
+            width: 8.6vw;
+            height: 5.5vw;
+          }
+        }
+      }
+    }
+  }
+
+}

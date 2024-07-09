@@ -1,0 +1,19 @@
+
+
+@mixin bg(){
+  background-size: 100% auto;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  display: block;
+}
+@mixin fz($size) {
+font-size: calc($size / 16) + rem;
+}
+
+$spw: 768px;
+$blue: #1db9df;
+$blk: #383838;
+$wblk: #6e6e6e;
+$pink: #db9ec2;
+$wpink: #fff0f8;

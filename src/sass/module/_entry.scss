@@ -1,0 +1,62 @@
+@use "./base/varuable"as var;
+
+
+.entry {
+  padding-bottom: 165px;
+  &__ttl{
+    @include var.bg();
+    background-image: url('../img/oubo_txt.png');
+    width: 363px;
+    height: 54px;
+    margin: 0 auto 8px;
+  }
+  &__btn{
+    max-width: 556px;
+    display: block;
+    margin: 0 auto 60px;
+  }
+  &__txt{
+    text-align: center;
+    color: var.$blk;
+    @include var.fz(26);
+    line-height: 1.6;
+  }
+  &__txt2{
+    text-align: center;
+    color: var.$blk;
+    @include var.fz(20);
+    line-height: 1.7;
+    margin: 30px auto 0;
+  }
+  &__line{
+    max-width: 350px;
+    margin: 25px auto 35px;
+  }
+  @media only screen and (max-width: var.$spw) {
+    padding-bottom: 22vw;
+
+    &__ttl{
+      width: 48.4vw;
+      height: 7.2vw;
+      margin: 0 auto 1vw;
+
+    }
+    &__btn{
+      max-width: 74vw;
+      margin: 0 auto 8vw;
+      margin: 0 auto 10px;
+    }
+    &__line{
+      max-width: 46vw;
+      margin: 3.4vw auto 4.6vw;
+    }
+    &__txt{
+      @include var.fz(13);
+      line-height: 1.6;
+    }
+    &__txt2{
+      @include var.fz(10);
+      margin-top: 4vw;
+    }
+  }
+}

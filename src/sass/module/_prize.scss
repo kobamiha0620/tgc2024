@@ -1,0 +1,153 @@
+@use "./base/varuable"as var;
+
+.contents {
+  padding: 0 35px;
+  background-color: var.$wpink;
+  background-image: url('../img/bg_gradetion.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left 0 bottom 0px;
+  @media only screen and (max-width: var.$spw) {
+    padding: 0 4.6vw;
+    background-position: left 0 bottom 5vw;
+
+  }
+
+}
+
+.prize {
+  background-color: #FFF;
+  padding: 50px 0;
+  margin: 0 auto 75px;
+  &__blc{
+    padding: 45px 35px 0;
+  }
+  &__sblc{
+    padding: 0 20px;
+    position: relative;
+  }
+  &__img{
+    margin-top: 35px;
+  }
+  &__subttl{
+    line-height: 0;
+    margin: 0 0 32px;
+  }
+  &__subttl02{
+    text-align: center;
+    color: var.$blk;
+    border-top: solid 1px var.$blk;
+    border-bottom: solid 1px var.$blk;
+    padding: 15px 0;
+    @include var.fz(30);
+    margin: 0 auto 36px;
+    line-height: 1;
+  }
+  &__prize{
+    @include var.fz(26);
+    line-height: 1.3;
+    text-indent: 37px;
+    padding-left: -37px;
+    color: var.$blk;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+    &--icon{
+      position: absolute;
+      width: 30px;
+      height: 34px;
+      top:  -7px;
+      left: 20px;
+    }
+  }
+  &__lists{
+    li{
+      list-style-type: none;
+
+      position: relative;
+      margin: 0 0 8px;
+      p{
+        @include var.fz(24);
+        line-height: 1.4;
+        text-indent: 0.7em;
+        color: var.$wblk;
+
+        &.note{
+          @include var.fz(20);
+          text-indent: 0;
+        }
+      }
+      span{
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        @include var.fz(15);
+
+      }
+      .first{
+        color: #ffd400;
+      }
+      .second{
+        color: #969696;
+      }
+      .third{
+        color: #1db9df;
+      }
+    }
+  }
+  @media only screen and (max-width: var.$spw) {
+    padding: 6.6vw 0;
+    margin: 0 auto 10vw;
+
+    &__blc{
+      padding: 6vw 4.6vw 0;
+    }
+    &__sblc{
+      padding: 0 .3vw;
+    }
+    &__img{
+      margin-top: 4.6vw;
+    }
+    &__subttl{
+      line-height: 0;
+      margin: 0 0 4.26vw;
+    }
+    &__subttl02{
+      padding: 2vw 0;
+      @include var.fz(15);
+      margin: 0 auto 4vw;
+    }
+    &__prize{
+      @include var.fz(13);
+      text-indent: 5vw;
+      padding-left: -5vw;
+      margin-bottom: 3vw;
+      &--icon{
+        position: absolute;
+        width: 4vw;
+        height: 4.56vw;
+        top:  -0.9vw;
+        left: .3vw;
+      }
+    }
+    &__lists{
+      li{
+        margin: 0 0 1vw;
+        p{
+          @include var.fz(12);
+          &.note{
+            @include var.fz(10);
+            text-indent: 0;
+          }
+        }
+        span{
+          top: 3px;
+          left: 0;
+          @include var.fz(8);
+
+        }
+
+      }
+    }
+  }
+}

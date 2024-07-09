@@ -1,0 +1,364 @@
+@use "./base/varuable"as var;
+
+.buy {
+  margin-top: -1px;
+  background-color: #F5F5F5;
+  padding-bottom: 1px;
+
+  .swiper {
+    max-width: 650px;
+
+    .swiper-button-prev {
+      left: 0;
+    }
+
+    /* 次への矢印 */
+    .swiper-button-next {
+      right: 0;
+    }
+
+    .swiper-button-prev {
+      &.grey {
+        height: 93px !important;
+        width: 47px !important;
+
+      }
+    }
+
+    .swiper-button-next {
+      &.grey {
+        height: 186px !important;
+        width: 47px !important;
+      }
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+      height: 93px !important;
+      width: 47px !important;
+      margin: auto;
+
+    }
+
+    .swiper-button-prev::after {
+      background-image: url('../img/arrow_prev.svg');
+
+    }
+
+    /* 次への矢印カスタマイズ */
+    .swiper-button-next::after {
+      background-image: url('../img/arrow_next.svg');
+    }
+  }
+
+  .container {
+    max-width: 694px;
+    position: relative;
+    margin: 0 auto 20px;
+
+    &.origin {
+      .swiper-button-prev::after {
+        background-image: url('../img/arrow_prev.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        margin: auto;
+        height: 93px !important;
+        width: 47px !important;
+      }
+
+      /* 次への矢印カスタマイズ */
+      .swiper-button-next::after {
+        background-image: url('../img/arrow_next.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        margin: auto;
+        height: 93px !important;
+        width: 47px !important;
+      }
+      &.michi {
+        .swiper-button-prev::after {
+          background-image: url('../img/arrow_prev-michi.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          content: "";
+          margin: auto;
+          height: 93px !important;
+          width: 47px !important;
+        }
+  
+        /* 次への矢印カスタマイズ */
+        .swiper-button-next::after {
+          background-image: url('../img/arrow_next-michi.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          content: "";
+          margin: auto;
+          height: 93px !important;
+          width: 47px !important;
+        }
+      }
+      /* 前への矢印カスタマイズ */
+
+    }
+  }
+
+  &__txt {
+    text-align: center;
+    color: var.$wblk;
+    @include var.fz(32);
+    line-height: 1.56;
+    margin: 0 auto 60px;
+  }
+
+  &__txt2 {
+    @include var.fz(24);
+    line-height: 1.4;
+    color: var.$wblk;
+    width: 550px;
+    margin: 0 auto 45px;
+  }
+
+  &__blc {
+    padding: 0 46px;
+    margin: 0 auto 45px;
+  }
+
+  &__item {
+    padding-top: 45px;
+  }
+
+  &__ttl {
+    @include var.bg();
+    background-image: url('../img/9012.svg');
+    width: 181px;
+    height: 55px;
+    margin: 0 auto 25px;
+    &--michi{
+      @include var.bg();
+      background-image: url('../img/9012_michi.svg');
+      width: 457px;
+      height: 96px;
+      margin: 0 auto 25px;
+
+    }
+  }
+
+  &__itemcon {
+    width: 550px;
+    margin: 0 auto 70px;
+
+    &--txt {
+      color: var.$wblk;
+      @include var.fz(24);
+      line-height: 1.5;
+      margin: 0 auto 35px;
+    }
+
+    &--name {
+      color: var.$wblk;
+      @include var.fz(26);
+      margin: 0 0 8px;
+
+    }
+
+    &--id {
+      color: var.$wblk;
+      @include var.fz(20);
+      margin: 0 0 20px;
+
+    }
+  }
+
+  &__btn {
+    background-color: var.$wblk;
+    color: #FFF;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    line-height: 1;
+    padding:  0;
+    margin: 0 auto 18px;
+    cursor: pointer;
+    input{
+      display: none;
+    }
+    label{
+      @include var.fz(32);
+      padding: 25px 0;
+      display: inline-block;
+      cursor: pointer;
+    }
+    &.michi{
+      background-color: #EA968B;
+    }
+  }
+
+  &__intro {
+    background-color: #FFF;
+    border: solid 1px var.$wblk;
+    color: var.$wblk;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    @include var.fz(32);
+    line-height: 1;
+    padding: 25px 0;
+    margin: 0 auto;
+
+    &.michi{
+      border: solid 1px #EA968B;
+      color: #EA968B;
+    }
+  }
+
+  @media only screen and (max-width: var.$spw) {
+    padding: 0 6vw;
+
+    .swiper-button-prev {
+      right: 0;
+    }
+
+    .swiper {
+      max-width: 86vw;
+
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        height: 11vw !important;
+        width: 5.5vw !important;
+      }
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto 2.7vw;
+      position: relative;
+
+      &.origin {
+        .swiper-button-prev {
+          left: 0 !important;
+        }
+
+        .swiper-button-next {
+          right: 0 !important;
+
+        }
+
+        .swiper-button-prev::after {
+          height: 9vw !important;
+          width: 4.5vw !important;
+        }
+
+        /* 次への矢印カスタマイズ */
+        .swiper-button-next::after {
+          height: 9vw !important;
+          width: 4.5vw !important;
+        }
+
+        /* 前への矢印カスタマイズ */
+
+      }
+
+      &.michi {
+        .swiper-button-prev {
+          left: 0 !important;
+          height: 9vw !important;
+          width: 4.5vw !important;
+        }
+
+        .swiper-button-next {
+          right: 0 !important;
+          height: 9vw !important;
+          width: 4.5vw !important;
+        }
+
+        /* 前への矢印カスタマイズ */
+
+      }
+    }
+
+    &__txt {
+      margin: 0 auto 8vw;
+      padding: 0 auto 8vw;
+      @include var.fz(16);
+
+    }
+
+    &__txt2 {
+      @include var.fz(12);
+      width: 73vw;
+      margin: 0 auto 12vw;
+    }
+
+    &__blc {
+      padding: 0 4.6vw;
+      margin: 0 auto 4.6vw;
+      width: 73vw;
+
+    }
+
+    &__item {
+      padding-top: 6vw;
+    }
+
+    &__ttl {
+      width: 24vw;
+      height: 7.2vw;
+      margin: 0 auto 3.3vw;
+      &--michi{
+        width:  61vw;
+        height: 12.8vw;
+        margin: 0 auto 3.3vw;
+  
+      }
+    }
+
+    &__itemcon {
+      width: 73vw;
+      margin-bottom: 0;
+      padding-bottom: 9vw;
+      &--txt {
+        @include var.fz(12);
+        margin: 0 auto 4.6vw;
+      }
+
+      &--name {
+        @include var.fz(13);
+        margin: 0 0 1vw;
+
+      }
+
+      &--id {
+        @include var.fz(10);
+        margin: 0 0 3vw;
+
+      }
+    }
+
+    &__btn {
+
+      margin: 0 auto 2.4vw;
+      label{
+        @include var.fz(16);
+        padding: 3.3vw 0;        display: inline-block;
+        cursor: pointer;
+      }
+    }
+
+    &__intro {
+      @include var.fz(16);
+      padding: 3.3vw 0;
+    }
+  }
+}
+
+
+.buyitem01 {
+  width: 550px;
+  margin: 0 auto;
+
+}

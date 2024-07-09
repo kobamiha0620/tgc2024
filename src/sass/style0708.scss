@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+@use "./base/varuable" as var;
+@import "./base/**/*.scss";
+@import "./module/*";
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Zen+Kaku+Gothic+New&display=swap');
+* {
+  font-family: "Zen Kaku Gothic New", sans-serif, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック";
+}
+@media only screen and (max-width: var.$spw) {
+
+}
+
+.pccontents {
+  width: 100%;
+  height: 100dvh;
+  height: 100vh;
+  position: relative;
+
+  &__inner {
+    background: url('../img/pcbg.jpg') no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #1db9df;
+
+    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100dvh;
+    height: 100vh;
+    overflow: hidden;
+  }
+  &__in{
+    position: relative;
+    width: 100%;
+    width: 100dvw;
+    width: 100vw;
+    height: 100dvh;
+    height: 100vh;
+  }
+  &__line{
+    @include var.bg();
+    background-image: url('../img/img_pcline.png');
+    position: fixed;
+    max-width: 337px;
+    max-height: 492px;
+    width: calc((100vw - 424px)/2);
+    height:calc((100vw - 424px)/2 * 1.1);
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+
+  }
+  &__btm{
+    position: fixed;
+    right: 26px;
+    bottom: 26px;
+    width: 174px;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__pcfv{
+      width: calc(90vw - 605px);
+      max-height: 70vh;
+      position: fixed;
+      top: 50%;
+      left: calc(50% - 302px);
+      transform: translate(-50%, -50%);
+      img{
+        width: auto;
+        height: auto;
+        max-height: 70vh;
+        display: block;
+        margin:  0 auto;
+      }
+      &--btn{
+        text-align: center;
+        width: 300px;
+        margin: 0 auto;
+        a{
+          border-radius: 30px;
+          padding: 10px;
+          color: #FFF;
+          @include var.fz(18);
+          display: block;
+          background-color: var.$blue;
+          text-decoration: none;
+          
+        }
+      }
+  }
+}
+
+.spcon {
+  position: absolute;
+  width: 750px;
+  height: auto;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  main{
+    position: relative;
+  }
+}
+@media only screen and (max-width: var.$spw) {
+  .spcon {
+    width: 100%;
+    position: relative;
+    right: 0;
+  }
+
+  .pccontents {
+    &__inner {
+      display: none;
+    }
+  }
+}
+
+.main{
+  &__ttl{
+    text-align: center;
+    font-family: "Cardo", serif;
+    color: var.$blk;
+    @include var.fz(103);
+    font-weight: 100;
+    transform: scaleX(0.9);
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  &__subttl{
+    text-align: center;
+    color: var.$blk;
+    @include var.fz(20);
+    margin-top: 0.2em;
+  }
+  @media only screen and (max-width: var.$spw) {
+    &__ttl{
+      @include var.fz(50);
+    }
+    &__subttl{
+      @include var.fz(10);
+    }
+  }
+
+}
+
+
+
+
+.webp{
+  .pccontents__inner{
+    background-image: url('../img/pcbg.webp') no-repeat;
+  }
+}

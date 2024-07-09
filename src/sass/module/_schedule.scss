@@ -1,0 +1,51 @@
+@use "./base/varuable"as var;
+
+
+.schedule {
+  width: 750px;
+  background-color: #F5F5F5;
+  padding-bottom: 165px;
+
+  &__blc{
+    width: 550px;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-top: 35px;
+
+  }
+  &__date{
+    color: var.$pink; 
+    @include var.fz(30);
+    line-height: 1.5;
+  }
+  &__date--com{
+    color: var.$blk;
+    @include var.fz(26);
+    line-height: 1.8;
+  }
+  &__entrytxt{
+    color: var.$blk;
+    text-align: center;
+    margin-top: -55px;
+    @include var.fz(26);
+  }
+  @media only screen and (max-width: var.$spw) {
+    padding-bottom: 22vw;
+    width: 100vw;
+    &__blc{
+      width: 73vw;    padding-top: 4.6vw;
+
+      max-width: 73vw;
+    }
+    &__date{
+      @include var.fz(15);
+    }
+    &__date--com{
+      @include var.fz(13);
+    }
+    &__entrytxt{
+      margin-top: 0;
+      @include var.fz(13);
+    }
+  }
+}

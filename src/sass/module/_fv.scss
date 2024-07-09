@@ -1,0 +1,101 @@
+@use "./base/varuable"as var;
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.fv {
+  width: 100%;
+  background-color: #059ad8;
+  line-height: 0;
+  &__txt {
+    @include var.fz(26);
+    text-align: center;
+    color: #FFF;
+    line-height: 2;
+  }
+
+  &__feature {
+    @include var.bg();
+    background-image: url('../img/fv_feature.png');
+    width: 655px;
+    height: 242px;
+    margin: 0 auto 72px;
+  }
+
+  &__simply {
+    @include var.bg();
+    background-image: url('../img/fv_simply.png');
+    margin: 0 auto 20px;
+    width: 304px;
+    height: 47px;
+
+    &--subttl {
+      text-align: center;
+      color: #FFF;
+      @include var.fz(30);
+      margin: 0 auto 50px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: var.$spw) {
+  .fv {
+    &__txt {
+      @include var.fz(13);
+    }
+
+    &__feature {
+      width: 87.4vw;
+      height: 33vw;
+      margin: 0 auto 9vw;
+    }
+
+    &__simply {
+      margin: 0 auto 2.7vw;
+      width: 40.5vw;
+      height: 6.3vw;
+
+      &--subttl {
+
+        @include var.fz(15);
+        margin: 0 auto 6.66vw;
+      }
+    }
+  }
+}
+.audition{
+  margin-top: 40px;
+  @media only screen and (max-width: var.$spw) {
+    margin-top: 5.3vw;
+  }
+  transition-timing-function: linear;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  /* スライダーのwrapper */
+  .swiper-wrapper {
+      transition-timing-function: linear;
+  }
+  
+  /* スライド */
+  .swiper-slide {
+      // height: auto !important; /* 高さを指定 */
+      // width: 500px !important;
+  }
+  
+  /* スライド内の画像 */
+  .swiper-slide img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+.webp {
+  .fv__feature {
+    background-image: url('../img/fv_feature.webp');
+
+  }
+}
