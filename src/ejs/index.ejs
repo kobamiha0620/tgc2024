@@ -7,54 +7,57 @@ keywords : '' ,
 description : '昨年大盛況のうちに幕を閉じたクレイツ スペシャルステージヘアショー出演権をかけた モデルオーディションを2024年も開催！' ,
 ogurl : 'https://createsnet.jp/tgckitakyushu/' ,
 path: '',
-ogimage : './img/ogp.jpg' ,
+ogimage : './img/ogp08.jpg' ,
 category : ['top'] ,
 pagename : '',
 css: [],
 js:[]
 };
-%> 
-  
+%>
+
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="<%= pageinit.ogurl %>">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="<%= pageinit.ogurl %>">
 
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
 
-<meta name="description" content="<%= pageinit.description %>"/>
+  <meta name="description" content="<%= pageinit.description %>" />
 
-<meta property="og:url" content="<%= pageinit.ogurl %>"/>
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="<%= pageinit.ttl %>"/>
-<meta property="og:description" content="<%= pageinit.description %>"/>
-<meta property="og:site_name" content="<%= pageinit.ttl %>"/>
-<meta property="og:image" content="<%= pageinit.ogimage %>"/>
+  <meta property="og:url" content="<%= pageinit.ogurl %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<%= pageinit.ttl %>" />
+  <meta property="og:description" content="<%= pageinit.description %>" />
+  <meta property="og:site_name" content="<%= pageinit.ttl %>" />
+  <meta property="og:image" content="<%= pageinit.ogimage %>" />
 
-<!-- favicon -->
-<link rel="icon" href="./img/favicon.ico" sizes="any">
-<!-- <link rel="icon" href="./img/favicons/icon.svg"  type="image/svg+xml">
+  <!-- favicon -->
+  <link rel="icon" href="./img/favicon.ico" sizes="any">
+  <!-- <link rel="icon" href="./img/favicons/icon.svg"  type="image/svg+xml">
 <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
 <link rel="manifest" href="./img/favicons/manifest.webmanifest"> -->
 
 
 
-<!-- swiper -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<!-- swiper -->
-<script src="./js/modernizr-custom.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- swiper -->
+  <script src="./js/jquery-3.7.1.min.js"></script>
 
-<link rel="stylesheet" href="./css/style0708.css">
+  <script src="./js/modernizr-custom.js"></script>
 
-<!-- GA4 -->
-<!-- Google tag (gtag.js) -->
+  <link rel="stylesheet" href="./css/style0822.css">
 
-<title><%= pageinit.ttl %></title>
+  <!-- GA4 -->
+  <!-- Google tag (gtag.js) -->
+
+  <title><%= pageinit.ttl %></title>
 
 
 </head>
@@ -65,7 +68,10 @@ js:[]
     <div class="pccontents__inner">
 
       <div class="pccontents__in">
-        <a href="https://lin.ee/slyGrEO" target="_blank" class="pccontents__line">応募はこちら</a>
+        <!-- <div class="pccontents__line">
+          <a href="https://lin.ee/slyGrEO" target="_blank" class="pccontents__line--con">応募はこちら</a>
+
+        </div> -->
 
       </div>
     </div>
@@ -76,25 +82,22 @@ js:[]
         <%- include('./module/main'); %>
         <%- include('./module/buy'); %>
         <%- include('./module/creates'); %>
-        <!-- <p class="copy"><small>©CREATEs presents TGC 北九州 2023</small></p> -->
 
       </main>
 
-</section>
+    </section>
+    <!-- <div class="fixbtn" id="fixbtn">
+      <a href="https://lin.ee/slyGrEO" target="_blank" class="entry__btn">
+        <img src="./img/btn_entry.png" alt="応募はこちら" width="1111" height="330">
+      </a>
+      <p class="schedule__entrytxt">2024年7月31日(水)応募締切</p>
 
-</div>
+    </div> -->
+  </div>
 
-<script src="./js/main.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/swiper.js"></script>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-    
-
-  
